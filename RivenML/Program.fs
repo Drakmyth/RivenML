@@ -11,6 +11,7 @@ let main argv =
 
     #if DEBUG
     // Load System.Core.dll so IEnumerables can be expanded in the debugger
+    // See: http://blog.paranoidcoding.com/2010/09/10/improving-the-display-of-f-seq-lt-t-gt-s-in-the-debugger.html
     System.Linq.Enumerable.Count([]) |> ignore
     #endif
 
