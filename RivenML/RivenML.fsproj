@@ -1,17 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="DomainTypes.fs" />
-    <Compile Include="Riven.fs" />
-    <Compile Include="Scraper.fs" />
+    <Compile Include="Program.fs" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FSharp.Data" Version="3.0.0-beta4" />
+    <ProjectReference Include="..\RivenMarketScraper\RivenMarketScraper.fsproj" />
   </ItemGroup>
 
   <ItemGroup>
