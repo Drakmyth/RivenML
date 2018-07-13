@@ -2,12 +2,13 @@
 
 open System
 open RivenMarketScraper.Scraper
+open RivenMarketScraper.Encoder
 
 let printRiven riven =
     Console.WriteLine(riven.ToString())
 
 [<EntryPoint>]
-let main argv =
+let main _ =
 
     #if DEBUG
     // Load System.Core.dll so IEnumerables can be expanded in the debugger
@@ -26,7 +27,9 @@ let main argv =
         Rerolls=(-1);
     }
     let rivens = scrape options
-    rivens |> Seq.iter printRiven
+    let riven = Seq.head rivens
+    riven |> printRiven
+    encode riven |> ignore
 
     Console.ReadKey() |> ignore
     0 // return an integer exit code

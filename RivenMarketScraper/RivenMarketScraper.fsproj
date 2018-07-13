@@ -8,6 +8,7 @@
     <Compile Include="DomainTypes.fs" />
     <Compile Include="Riven.fs" />
     <Compile Include="Scraper.fs" />
+    <Compile Include="Encoder.fs" />
   </ItemGroup>
 
   <ItemGroup>

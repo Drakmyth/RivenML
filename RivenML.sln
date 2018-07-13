@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "RivenMarketScraper", "RivenMarketScraper\RivenMarketScraper.fsproj", "{31A9B0D4-53F9-4F1B-8C6A-47432BC1DD48}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "RivenMarketScraper", "RivenMarketScraper\RivenMarketScraper.fsproj", "{31A9B0D4-53F9-4F1B-8C6A-47432BC1DD48}"
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "RivenML", "RivenML\RivenML.fsproj", "{65048695-E841-40F9-BD7C-55AB1392472B}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "RivenMarketScraper.Test", "RivenMarketScraper.Test\RivenMarketScraper.Test.fsproj", "{E8E5BC7B-CFBA-4005-9C30-2893FC21E978}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{65048695-E841-40F9-BD7C-55AB1392472B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65048695-E841-40F9-BD7C-55AB1392472B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65048695-E841-40F9-BD7C-55AB1392472B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8E5BC7B-CFBA-4005-9C30-2893FC21E978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8E5BC7B-CFBA-4005-9C30-2893FC21E978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8E5BC7B-CFBA-4005-9C30-2893FC21E978}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8E5BC7B-CFBA-4005-9C30-2893FC21E978}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

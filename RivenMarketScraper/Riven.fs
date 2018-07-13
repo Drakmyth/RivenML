@@ -13,10 +13,8 @@ module Riven =
             let name = sprintf "data-stat%d" (i + 1)
             let value = sprintf "%sval" name
 
-            {
-                Name=attrib name;
-                Value=attrib value |> float;
-            })
+            attrib name,attrib value |> float
+        )
 
     let parse node =
         let attrib = getAttribute node
