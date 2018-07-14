@@ -23,13 +23,17 @@ module Encoder =
         String.Join(separator, values)
 
     let binary (maximum:int) (value:int) =
-        if (maximum <= 0) then invalidArg "maximum" ("Maximum must be greater than 0. Maximum: " + maximum.ToString())
-        if (value < 0) then invalidArg "value" ("Value must be greater than or equal to 0. Value: " + value.ToString())
-        if (maximum < value) then invalidArg "maximum" ("Maximum must be greater than or equal to value. Maximum: " + maximum.ToString() + ", Value: " + value.ToString())
+        if not (maximum > 0) then invalidArg "maximum" ("Maximum must be greater than 0. Maximum: " + maximum.ToString())
+        if not (value >= 0) then invalidArg "value" ("Value must be greater than or equal to 0. Value: " + value.ToString())
+        if not (maximum >= value) then invalidArg "maximum" ("Maximum must be greater than or equal to value. Maximum: " + maximum.ToString() + ", Value: " + value.ToString())
 
         Convert.ToString(value, 2).PadLeft(Convert.ToString(maximum, 2).Length, '0').ToCharArray() |> join " "
 
     let onehot maximum value =
+        if not (maximum > 0) then invalidArg "maximum" ("Maximum must be greater than 0. Maximum: " + maximum.ToString())
+        if not (value >= 0) then invalidArg "value" ("Value must be greater than or equal to 0. Value: " + value.ToString())
+        if not (maximum >= value) then invalidArg "maximum" ("Maximum must be greater than or equal to value. Maximum: " + maximum.ToString() + ", Value: " + value.ToString())
+
         Math.Min(value, 1).ToString().PadLeft(value, '0').PadRight(maximum, '0').ToCharArray() |> join " "
     
     let encodeData (method:int->int->string) collection value = 
