@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="EncoderJoinTests.fs" />
     <Compile Include="EncoderBinaryTests.fs" />
     <Compile Include="EncoderOnehotTests.fs" />
   </ItemGroup>
