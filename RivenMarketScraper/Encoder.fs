@@ -38,7 +38,7 @@ module Encoder =
     
     let encodeData (method:int->int->string) collection value = 
         let index = match collection |> Seq.tryFindIndex (fun n -> n = value) with
-                    | Some value -> value
+                    | Some value -> value + 1
                     | None -> 0
         method (collection |> Seq.length) index
 

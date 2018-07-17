@@ -7,7 +7,7 @@ module ``Encoder join Tests`` =
     open FsCheck.Xunit
 
     [<Property>]
-    let ``Output string must have spaces between each bit`` separator =
+    let ``Output string must have separators between each value`` separator =
         Arb.generate<string>
         |> Gen.arrayOf
         |> Arb.fromGen

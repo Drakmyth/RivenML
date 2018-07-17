@@ -4,7 +4,6 @@
 module DomainTypes =
     
     let WeaponNames = [
-        "None";
         "Amprex";
         "Arca_Plasmor";
         "Argonak";
@@ -265,7 +264,6 @@ module DomainTypes =
     ]
 
     let WeaponTypes = [
-        "None";
         "Primary";
         "Secondary";
         "Melee";
@@ -273,7 +271,6 @@ module DomainTypes =
     ]
 
     let Polarities = [
-        "none";
         "madurai";
         "naramon";
         "vazarin";
@@ -282,7 +279,6 @@ module DomainTypes =
     ]
 
     let StatNames = [
-        "None";
         "Damage";
         "Multi";
         "Speed";
